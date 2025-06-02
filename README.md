@@ -14,7 +14,7 @@ You can host the app using GitHub Pages or any static hosting service.
 - Clean and minimal UI design
 - Fully responsive layout
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - HTML
 - CSS (custom styling in `custom.css`)
