@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Alarm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="custom.css">
+</head>
+
+<body>
+
+    <div class="app" id="appContainer">
+        <div>
+            <div class="header">
+                <div class="subtext" id="ampm">am</div>
+                <h1 id="current-time">07:32</h1>
+                <div class="subtext">Mo Tu We Th Fr</div>
+            </div>
+
+            <div class="alarms" id="alarmList">
+                <strong>OTHER ALARMS</strong>
+
+                <div class="alarm">
+                    <div class="info">
+                        <span class="time">08:30 AM</span>
+                        <span class="label">WORK</span>
+                    </div>
+                    <div class="toggle" onclick="toggleAlarm(this)"></div>
+                </div>
+
+                <div class="alarm">
+                    <div class="info">
+                        <span class="time">06:30 AM</span>
+                        <span class="label">GYM</span>
+                    </div>
+                    <div class="toggle active" onclick="toggleAlarm(this)"></div>
+                </div>
+            </div>
+
+            <div class="new-alarm">
+                <input type="time" id="newTime">
+                <input type="text" id="newLabel" placeholder="Label">
+                <button onclick="addAlarm()">Set</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div>Alarm Clock</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

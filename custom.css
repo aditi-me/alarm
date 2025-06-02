@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: url("alarm-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app {
+  width: 320px;
+  height: 620px;
+  border-radius: 30px;
+  overflow: hidden;
+  background: rgba(18, 25, 45, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 150, 0, 0.2);
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  20% {
+    transform: translate(-2px, 0px) rotate(-1deg);
+  }
+
+  40% {
+    transform: translate(2px, 1px) rotate(1deg);
+  }
+
+  60% {
+    transform: translate(-1px, 2px) rotate(0deg);
+  }
+
+  80% {
+    transform: translate(2px, -1px) rotate(1deg);
+  }
+
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+.header {
+  background: #ff8c00e0;
+  padding: 30px 20px 10px;
+  color: #1a2a4a;
+}
+
+.header h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.subtext {
+  font-size: 14px;
+  margin-top: -5px;
+  color: rgba(26, 42, 74, 0.7);
+}
+
+.alarms {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #e0e0e0;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.alarm {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 165, 0, 0.1);
+}
+
+.alarm .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.alarm .time {
+  font-size: 18px;
+  color: #ffb44a;
+}
+
+.alarm .label {
+  font-size: 12px;
+  color: #bbbbbb;
+}
+
+.toggle {
+  width: 40px;
+  height: 20px;
+  background: #555;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.toggle::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: white;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: left 0.3s;
+}
+
+.toggle.active {
+  background: #3ac4b5;
+}
+
+.toggle.active::after {
+  left: 22px;
+}
+
+.new-alarm {
+  padding: 10px 20px;
+}
+
+.new-alarm input {
+  padding: 8px;
+  margin-right: 8px;
+  border: 1px solid #777;
+  border-radius: 10px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #eee;
+}
+
+.new-alarm input::placeholder {
+  color: #aaa;
+}
+
+.new-alarm button {
+  background: #ff8c00e0;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  padding: 8px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.new-alarm button:hover {
+  background: #ffa500;
+}
+
+.footer {
+  background: #1a2a4a;
+  color: #ffb44a;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
